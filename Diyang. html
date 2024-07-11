@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Wifey</title>
+    <style>
+        :root {
+            --bg-color: pink;
+            --text-color: white;
+            --shadow-color: #808080;
+            --button-bg-yes: #ff6699;
+            --button-bg-no: #ff99cc;
+            --button-hover-yes: #ff99cc;
+            --button-hover-no: #ff6699;
+            --button-active-no: #ff6666;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: cursive;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: var(--text-color);
+            text-shadow: 2px 2px var(--shadow-color);
+        }
+
+        p {
+            font-size: 2em;
+            color: var(--text-color);
+            text-shadow: 2px 2px var(--shadow-color);
+        }
+
+        button {
+            font-size: 2em;
+            margin: 20px;
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #yesButton {
+            background-color: var(--button-bg-yes);
+            color: var(--text-color);
+            text-shadow: none;
+        }
+
+        #yesButton:hover {
+            background-color: var(--button-hover-yes);
+        }
+
+        #noButton {
+            background-color: var(--button-bg-no);
+            color: var(--text-color);
+            text-shadow: none;
+        }
+
+        #noButton:hover {
+            background-color: var(--button-hover-no);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My Wifey</h1>
+        <p>Will you be my wifey forever?</p>
+        <button id="yesButton" onclick="alert('Yes! I would love to be your wifey.')">Yes</button>
+        <button id="noButton" onclick="this.innerHTML='Dapat wala kang ibang asawa, ako lang!'; this.style.backgroundColor=var(--button-active-no);">No</button>
+    </main>
+</body>
+</html>
